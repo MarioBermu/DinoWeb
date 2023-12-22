@@ -9,7 +9,11 @@ import { LogoComponent } from "./logo/logo.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, BarraDeNavegacionComponent, LogoComponent]
+    imports: [CommonModule, RouterOutlet, BarraDeNavegacionComponent, LogoComponent],
+    template: `
+    <main>
+      <app-home></app-home>
+    </main>`,
 })
 export class AppComponent {
   title = 'DinoWeb';

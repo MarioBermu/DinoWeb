@@ -1,8 +1,17 @@
-import { Routes } from '@angular/router';
+
+import { DinocromosComponent } from './dinocromos/dinocromos.component';
+import { RouterModule,Routes } from '@angular/router';
 import { LogoComponent } from './logo/logo.component';
+import { HomeComponent } from './home/home.component';
 
 
-const rutas: Routes = [
-  { path: 'logo', component: LogoComponent }
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'logo', component: LogoComponent },
+  { path: 'dinocromos', component: DinocromosComponent}
 ];
-export const routes: Routes = [];
+
+
+
+
+
