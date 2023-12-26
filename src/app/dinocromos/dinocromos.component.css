@@ -4,6 +4,9 @@
   box-sizing: border-box;
 
 }
+p{
+  color:black;
+}
 h1{
 
   text-align: center;
@@ -100,6 +103,7 @@ header{
   width: 100px;
   height: 35px;
   border-radius: 10px;
+  border-color: black;
   border:none;
 
 
