@@ -21,6 +21,7 @@ body{
 }
 
 img{
+
   width: 320px;
   height: 340px;
   object-fit: cover;
@@ -30,7 +31,7 @@ img{
 
 
 header{
-  background-color:#dad9bb;
+  background-color:#dad9bb;/**/
   font-size: 40px;
   display: flex;
   align-items: center;
@@ -66,7 +67,7 @@ header{
   border-radius: 20px ;
 }
 .contenedor>div:hover{
-  background-color: #dad9bb;
+  background-color: #acaa8e;
 }
 
 .informacion{
@@ -113,5 +114,19 @@ header{
 }
 
 .informacion button:hover{
-  background-color: #FFFDD0;
+  border-color: black;
+  border-style: solid ;
+  border-width: 1px;
+  background-color: #fdfcda;
+}
+
+#contenedor {
+  margin-top: 10px;
+  padding: 10px;
+
+}
+
+div {
+  margin-bottom: 5px;
+  padding: 5px;
 }
