@@ -7,13 +7,15 @@ import { JuegodinoComponent } from './juegodino/juegodino.component';
 import { NgModule } from '@angular/core';
 import { CargarScriptsService } from './cargar-scripts.service';
 import { PagejuegoComponent } from './pagejuego/pagejuego.component';
+import { PageNosotrosComponent } from './page-nosotros/page-nosotros.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'logo', component: LogoComponent },
   { path: 'dinocromos', component: DinocromosComponent},
   { path: 'juegodino', component: JuegodinoComponent},
-  { path: 'pagejuego', component: PagejuegoComponent}
+  { path: 'pagejuego', component: PagejuegoComponent},
+  { path: 'pageNosotros', component: PageNosotrosComponent}
 ];
 
 @NgModule({

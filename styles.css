@@ -7,6 +7,7 @@ ul.navega li {
 
 /* header */
 h1 {
+  text-align: center;
   font-family:Georgia;
   }
   a[target="inicio"]{
@@ -27,7 +28,7 @@ h1 {
 
 /* body */
 body{
-  background-color: #6e6e6e;
+  background-color: #757575;
   color: blanchedalmond;
   /* color texto */
 }
@@ -138,10 +139,9 @@ a[target="menu"]{
   }
 }
 
-
-
 img{
-
-
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 20px 20px 20px 20px;
 }

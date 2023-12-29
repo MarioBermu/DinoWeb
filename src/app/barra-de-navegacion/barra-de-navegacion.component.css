@@ -5,3 +5,16 @@
 .active-link a{
   color: #000;
 }
+
+.navbar{
+  background-color: #A8906E;
+  font-family:Georgia;
+
+}
+
+
+
+.barranav{
+  background-color: #A8906E;
+  border-bottom: 3px solid #513A2A;
+}

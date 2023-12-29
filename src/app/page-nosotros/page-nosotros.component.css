@@ -1,0 +1,46 @@
+
+.contenedor-imagen1 img {
+
+
+
+margin: 10px;
+  grid-column: 1; /* Ocupa la primera columna */
+  grid-row: 1; /* Está en la primera fila */
+
+}
+
+.contenedor-imagen2 img {
+  margin: 10px;
+  grid-column: 2; /* Ocupa la primera columna */
+  grid-row: 2; /* Está en la segunda fila */
+
+}
+.contenedor-imagen3 img {
+
+  grid-column: 2; /* Ocupa la primera columna */
+  grid-row: 1; /* Está en la segunda fila */
+
+}
+.contenedor-imagen4 img {
+
+  grid-column: 2; /* Ocupa la primera columna */
+  grid-row: 1; /* Está en la segunda fila */
+
+}
+.container {
+  display: grid;
+  margin: 100px 180px 100px;
+  width: 80%;
+  grid-template-columns: repeat(2,minmax(50px,1fr));
+  gap:60px;
+}
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: Palatino;
+}
+
+img{
+  max-width: 100%;
+}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BarraDeNavegacionComponent } from '../barra-de-navegacion/barra-de-navegacion.component';
 import { JuegodinoComponent } from '../juegodino/juegodino.component';
 
+
 @Component({
   selector: 'app-pagejuego',
   standalone: true,
