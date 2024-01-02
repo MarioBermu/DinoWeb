@@ -18,3 +18,13 @@
   background-color: #A8906E;
   border-bottom: 3px solid #513A2A;
 }
+
+.derecha1{
+  position:fixed;
+  right: 160px;
+}
+
+.derecha2{
+  position:fixed;
+  right: 60px;
+}
