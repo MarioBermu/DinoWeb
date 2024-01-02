@@ -18,4 +18,6 @@ import { PageNosotrosComponent } from '../page-nosotros/page-nosotros.component'
 })
 export class BarraDeNavegacionComponent {
 
+
+
 }

@@ -10,7 +10,8 @@ import { PagejuegoComponent } from './pagejuego/pagejuego.component';
 import { PageNosotrosComponent } from './page-nosotros/page-nosotros.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', pathMatch:'full', redirectTo: 'Home' },
+  { path: 'home', component: HomeComponent },
   { path: 'logo', component: LogoComponent },
   { path: 'dinocromos', component: DinocromosComponent},
   { path: 'juegodino', component: JuegodinoComponent},

@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BarraDeNavegacionComponent } from '../barra-de-navegacion/barra-de-navegacion.component';
 import { CargarScriptsService } from '../cargar-scripts.service';
+import { CartComponent } from '../cart/cart.component';
+import { ProductComponent } from '../product/product.component';
+
 
 @Component({
   selector: 'app-dinocromos',
   standalone: true,
-  imports: [CommonModule, BarraDeNavegacionComponent],
+  imports: [CommonModule, BarraDeNavegacionComponent, CartComponent, ProductComponent],
   templateUrl: './dinocromos.component.html',
   styleUrl: './dinocromos.component.css'
 })
@@ -24,5 +27,11 @@ export class DinocromosComponent {
       nuevoElemento.textContent = 'Nuevo Elemento';
       contenedor.appendChild(nuevoElemento);
     }
+  }
+
+  viewCart: boolean = false;
+
+  onToggleCart() {
+    this.viewCart = !this.viewCart;
   }
 }
