@@ -8,6 +8,9 @@ import { NgModule } from '@angular/core';
 import { CargarScriptsService } from './cargar-scripts.service';
 import { PagejuegoComponent } from './pagejuego/pagejuego.component';
 import { PageNosotrosComponent } from './page-nosotros/page-nosotros.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 export const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: 'Home' },
@@ -16,7 +19,9 @@ export const routes: Routes = [
   { path: 'dinocromos', component: DinocromosComponent},
   { path: 'juegodino', component: JuegodinoComponent},
   { path: 'pagejuego', component: PagejuegoComponent},
-  { path: 'pageNosotros', component: PageNosotrosComponent}
+  { path: 'pageNosotros', component: PageNosotrosComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({

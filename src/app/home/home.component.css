@@ -2,3 +2,32 @@
 h1{
   text-align: center;
 }
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: #333; /* Puedes ajustar el color de fondo según tus preferencias */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-left: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* Puedes ajustar el color del texto según tus preferencias */
+}
+
+.greeting {
+  color: #fff; /* Color de texto */
+  margin-right: 20px; /* Espaciado a la derecha */
+}

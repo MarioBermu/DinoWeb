@@ -4,17 +4,30 @@ import { RouterOutlet } from '@angular/router';
 import { BarraDeNavegacionComponent } from './barra-de-navegacion/barra-de-navegacion.component';
 import { LogoComponent } from "./logo/logo.component";
 
+import { AuthService } from './service/auth.service';
+import { OnInit } from '@angular/core';
+import { UserI } from './models/user';
+
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     imports: [CommonModule, RouterOutlet, BarraDeNavegacionComponent, LogoComponent],
-    template: `
-    <main>
-      <app-home></app-home>
-    </main>`,
+    // template: `
+    // <main>
+    //   <app-home></app-home>
+    // </main>`,
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'DinoWeb';
+  loggedInUser: string ='';
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.loggedInUsers.subscribe((user) => {
+      this.loggedInUser = user;
+    });
+  }
 }

@@ -1,0 +1,19 @@
+<div class="form-container">
+  <h2>Crear una cuenta</h2>
+  <form #frmRegister="ngForm" id="register-form" (ngSubmit)="onRegister(frmRegister)">
+    <label for="name" class="sr-only">Nombre de usuario</label>
+    <input type="text" name="name" id="name" placeholder="nombre de usuario" [(ngModel)]="frmRegister.value.name" required>
+    <p> </p>
+    <label for="email" class="sr-only">Email</label>
+    <input type="email" name="email" id="email" placeholder="email" [(ngModel)]="frmRegister.value.email" required>
+    <p> </p>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" name="password" id="password" placeholder="contraseña" [(ngModel)]="frmRegister.value.password" required>
+    <p> </p>
+    <button type="submit">Registrarse</button>
+    <p id="mensajeError" class="error escondido">Error en el registro</p>
+  </form>
+  <p> </p>
+  <p>¿Ya tienes una cuenta? <a routerLink="login" href="login" class="color">Inicia sesión</a></p>
+  <p>Volver a <a routerLink="home" href="home" class="color">Inicio</a></p>
+</div>
