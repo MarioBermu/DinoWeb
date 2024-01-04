@@ -13,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 export const routes: Routes = [
-  { path: '', pathMatch:'full', redirectTo: 'Home' },
+  { path: '', pathMatch:'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'logo', component: LogoComponent },
   { path: 'dinocromos', component: DinocromosComponent},

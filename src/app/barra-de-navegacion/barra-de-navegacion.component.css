@@ -20,11 +20,11 @@
 }
 
 .derecha1{
-  position:fixed;
+  position: absolute;
   right: 160px;
 }
 
 .derecha2{
-  position:fixed;
+  position: absolute;
   right: 60px;
 }

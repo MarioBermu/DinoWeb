@@ -6,6 +6,7 @@ import { JuegodinoComponent } from '../juegodino/juegodino.component';
 import { RouterModule } from '@angular/router';
 import { PagejuegoComponent } from '../pagejuego/pagejuego.component';
 import { PageNosotrosComponent } from '../page-nosotros/page-nosotros.component';
+import { HomeComponent } from '../home/home.component';
 
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
@@ -18,7 +19,7 @@ import { UserI } from '../models/user';
 @Component({
   selector: 'app-barra-de-navegacion',
   standalone: true,
-  imports: [CommonModule, LogoComponent,DinocromosComponent,RouterModule ,JuegodinoComponent,PagejuegoComponent,PageNosotrosComponent],
+  imports: [CommonModule, LogoComponent,DinocromosComponent,RouterModule ,JuegodinoComponent,PagejuegoComponent,PageNosotrosComponent,HomeComponent],
   templateUrl: './barra-de-navegacion.component.html',
   styleUrl: './barra-de-navegacion.component.css'
 })
