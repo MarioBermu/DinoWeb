@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StoreService } from '../service/store.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,4 +11,21 @@ import { CommonModule } from '@angular/common';
 })
 export class CartComponent {
 
+
+  myCart$=this.storeService.myCart$;
+
+  constructor(private storeService:StoreService) {}
+
+  totalProducts(price:number,units:number){
+    return price*units;
+  }
+
+  deleteProduct(id:string){
+    this.storeService.deleteProduct(id);
+  }
+
+  totalCart(){
+    const result = this.storeService.totalCart();
+    return result
+  }
 }
