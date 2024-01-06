@@ -4,12 +4,12 @@ import { BarraDeNavegacionComponent } from '../barra-de-navegacion/barra-de-nave
 import { CargarScriptsService } from '../cargar-scripts.service';
 import { CartComponent } from '../cart/cart.component';
 import { ProductComponent } from '../product/product.component';
-
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-dinocromos',
   standalone: true,
-  imports: [CommonModule, BarraDeNavegacionComponent, CartComponent, ProductComponent],
+  imports: [CommonModule, BarraDeNavegacionComponent, CartComponent, ProductComponent,HeaderComponent],
   templateUrl: './dinocromos.component.html',
   styleUrl: './dinocromos.component.css'
 })
@@ -29,9 +29,5 @@ export class DinocromosComponent {
     }
   }
 
-  viewCart: boolean = false;
 
-  onToggleCart() {
-    this.viewCart = !this.viewCart;
-  }
 }

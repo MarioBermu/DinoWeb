@@ -3,22 +3,17 @@
 <html lang="es">
 <br>
   <main id="main">
-    <nav class="navbar">
-      <div class="navbar-logo">
-        <i class="fa-solid fa-store fa-2x"></i>
+
+    <app-header></app-header>
+    <div class="container">
+      <div class="container-title">
+        <h2>Tu tienda de angular</h2>
       </div>
-      <div class="navbar-title"><h1>LA TIENDA EN CASA</h1></div>
-      <div class="navbar-cart" (click)="onToggleCart()">
-        <div class="navbar-cart-items">
-          <p>0</p>
-        </div>
-        <i class="fa-solid fa-cart-shopping"></i>
+      <div class="container-products">
+        <app-product></app-product>
       </div>
-    </nav>
-    <div class="cart" [ngClass]="{show:viewCart}">
-      <app-cart></app-cart>
     </div>
-    <app-product></app-product>
+
     <div id="contenedor" class="contenedor">
         <div>
             <img src="https://i.pinimg.com/564x/7d/d9/f7/7dd9f7756eb196c3a095abb2782672f5.jpg">

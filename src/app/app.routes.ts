@@ -5,7 +5,7 @@ import { LogoComponent } from './logo/logo.component';
 import { HomeComponent } from './home/home.component';
 import { JuegodinoComponent } from './juegodino/juegodino.component';
 import { NgModule } from '@angular/core';
-import { CargarScriptsService } from './cargar-scripts.service';
+
 import { PagejuegoComponent } from './pagejuego/pagejuego.component';
 import { PageNosotrosComponent } from './page-nosotros/page-nosotros.component';
 import { LoginComponent } from './login/login.component';
@@ -27,7 +27,7 @@ export const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [CargarScriptsService],
+  providers: [],
 })
 
 export class AppRoutingModule { }
