@@ -1,0 +1,16 @@
+[
+    {
+    "title": "Dinosauriouno",
+    "description": "esta extinguido",
+    "price": 100,
+    "images": "https://i.pinimg.com/564x/7d/d9/f7/7dd9f7756eb196c3a095abb2782672f5.jpg"
+    },
+
+    {
+    "title": "Dinosaurio2",
+    "description": "esta extinguido x2",
+    "price": 110,
+    "images": "https://i.pinimg.com/564x/7d/d9/f7/7dd9f7756eb196c3a095abb2782672f5.jpg"
+    }
+
+]

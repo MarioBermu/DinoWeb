@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class StoreService {
 
-  //baseUrl = 'http://localhost:3000';
-  baseUrl='https://api.escuelajs.co/api/v1/';
+  baseUrl = 'localhost:3000/api/';
+  //baseUrl='https://api.escuelajs.co/api/v1/';
 
 
   //lista carrito
@@ -24,7 +24,7 @@ myCart$=this.myCart.asObservable();
   constructor(private httpClient:HttpClient) { }
 
     getAllProducts(): Observable<Product[]> {
-    const response =this.httpClient.get<Product[]>(`${this.baseUrl}products`);
+    const response =this.httpClient.get<Product[]>(`${this.baseUrl}cromos`);
     return response;
     }
     addProduct(product:Product){
