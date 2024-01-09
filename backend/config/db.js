@@ -7,10 +7,14 @@ module.exports = () => {
     .then(() => console.log(`Mongo connected on ${dbURL}`))
     .catch(err => console.log(`Connection has error ${err}`))
 
-    process.on('SIGINT', () => {
-      mongoose.connection.close(() => {
+    process.on('SIGINT', async () => {
+      try {
+        await mongoose.connection.close();
         console.log(`Mongo is disconnected`);
-        process.exit(0)
-      });
+        process.exit(0);
+      } catch (err) {
+        console.error('Error closing Mongoose connection:', err);
+        process.exit(1);
+      }
     });
   }
