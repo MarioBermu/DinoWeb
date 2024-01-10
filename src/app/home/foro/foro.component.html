@@ -1,0 +1,12 @@
+<div class="form-container">
+<h1>FOROCOCHES</h1>
+<form #frmForo="ngForm" id="foro-form" (ngSubmit)="onCrearMensaje(frmForo)">
+  <label for="name">Nombre</label>
+  <input type="text" name="name" id="name" placeholder="nombre" ngModel required>
+  <p> </p>
+  <label for="message">Mensaje</label>
+  <input type="text" name="message" id="message" placeholder="mensaje" ngModel required>
+  <p> </p>
+  <button type="submit" value="Send">Enviar</button>
+</form>
+</div>

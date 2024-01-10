@@ -7,4 +7,10 @@ export interface JwtResponseI {
     accessToken: string;
     expiresIn: string;
   };
+
+  dataMensaje: {
+    id: number;
+    name: string;
+    mensaje: string;
+  }
 }

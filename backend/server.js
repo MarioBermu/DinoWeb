@@ -14,6 +14,7 @@ const router = express.Router();
 
 const bodyParser = require('body-parser');
 const cromosRoutes = require('./cromos/cromos.routes');
+const foroRoutes = require('./foro/foro.routes');
 const bodyParserJSON = bodyParser.json();
 const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 
@@ -33,6 +34,7 @@ router.get('/', (req, res) => {
 // inicializamos las rutas de la API.
 cromosRoutes(router);
 
+foroRoutes(router);
 
 
 app.use(router);
