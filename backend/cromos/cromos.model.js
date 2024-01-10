@@ -202,7 +202,7 @@ const CargarCromos = async() => {
                                   {
                                     id: 26,
                                     title: 'Cromo Dinosauria Bailarina',
-                                    price: 100,
+                                    price: 90,
                                     description: 'esta extinguido',
                                     images: "https://www.collector4u.com/wp-content/uploads/2020/12/x_neca30626_g.jpg"
                                     },
