@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class StoreService {
 
-  baseUrl = 'localhost:3000/api/';
+  baseUrl = 'http://localhost:3000/api/';
   //baseUrl='https://api.escuelajs.co/api/v1/';
 
 
@@ -39,7 +39,7 @@ myCart$=this.myCart.asObservable();
           return element.id===product.id
         })
         if(productMod){
-         product.cantidad= productMod.cantidad+1;
+         product.cantidad= productMod.cantidad;
          this.myCart.next(this.myList);
         }
         else{
