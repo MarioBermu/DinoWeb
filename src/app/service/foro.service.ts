@@ -13,16 +13,20 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ForoService {
-  AUTH_SERVER: string = 'http://localhost:3000/api';
+  AUTH_SERVER: string = 'http://localhost:3000/api/foro';
   authSubject = new BehaviorSubject(false);
 
   constructor(private httpClient: HttpClient) {
 
   }
-crearMensaje(mensaje: MensajeI): Observable<JwtResponseI> {
+crearMensaje(mensaje: string): Observable<any> {
 
-  return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/foro`, mensaje);
+  return this.httpClient.post<any>(`${this.AUTH_SERVER}`,{message:mensaje} );
 
+    }
+
+    getMensajes(): Observable<any> {
+      return this.httpClient.get<any[]>(`${this.AUTH_SERVER}`);
     }
 
 

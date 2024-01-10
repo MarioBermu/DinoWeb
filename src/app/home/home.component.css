@@ -33,12 +33,17 @@ nav a {
 }
 
 img{
-  display: relative;
+
+  width: 98%;
+  height: 98%;
+  object-fit: cover;
+
+}
+
+.imagen {
+
+  display: flex;
   justify-content: center;
 
   align-items: center;
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-
 }

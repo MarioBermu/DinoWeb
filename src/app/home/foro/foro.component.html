@@ -1,12 +1,16 @@
-<div class="form-container">
-<h1>FOROCOCHES</h1>
-<form #frmForo="ngForm" id="foro-form" (ngSubmit)="onCrearMensaje(frmForo)">
-  <label for="name">Nombre</label>
-  <input type="text" name="name" id="name" placeholder="nombre" ngModel required>
-  <p> </p>
-  <label for="message">Mensaje</label>
-  <input type="text" name="message" id="message" placeholder="mensaje" ngModel required>
-  <p> </p>
-  <button type="submit" value="Send">Enviar</button>
-</form>
-</div>
+
+
+<div class="card-body">
+  <div *ngFor="let comment of comments$ | async" class="comment">
+    {{ comment.message }}
+  </div>
+
+  <div class="form-group mt-3">
+    <textarea
+      class="form-control"
+      [(ngModel)]="newmensaje"
+      placeholder="Añadir comentario..."
+      rows="3"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary" (click)="publicarMensaje()">Enviar Comentario</button>

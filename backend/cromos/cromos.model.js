@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const fs= require('fs');
+const rawData = fs.readFileSync('../cromos.json');
+const jsonData = JSON.parse(rawData);
 
 const cromosSchema = new Schema({
   id: Number,

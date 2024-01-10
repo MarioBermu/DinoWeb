@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ForoService } from '../../service/foro.service';
 import { OnInit } from '@angular/core';
 import { MensajeI } from '../../models/mensaje';
-import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,26 +15,28 @@ import { Router } from '@angular/router';
   styleUrl: './foro.component.css'
 })
 export class ForoComponent implements OnInit {
-  constructor(private foroService: ForoService, private router: Router) { }
+  newmensaje: string='';
+  comments$: Observable<any[]> | undefined;
+  constructor(private foroService: ForoService) { }
   ngOnInit() {
+    this.cargarMensajes();
   }
-  onCrearMensaje(form: { value: MensajeI; }): void {
-    this.foroService.crearMensaje(form.value).subscribe(res => {
-      // Almacenar el nombre de usuario en el servicio de autenticación
-      this.router.navigateByUrl('/home');
+  cargarMensajes() {
+    this.comments$ = this.foroService.getMensajes();
+  }
 
-    },
-    (error) => {
-      // Muestra el mensaje de error en tu plantilla HTML
-      this.mostrarError();
-    })
-  };
-
-  mostrarError(): void {
-    const mensajeError = document.getElementById('mensajeError');
-    if (mensajeError) {
-      mensajeError.style.display = 'block';
+  publicarMensaje() {
+    if (this.newmensaje.trim() !== '') {
+      this.foroService.crearMensaje(this.newmensaje).subscribe(
+        () => {
+          this.cargarMensajes();
+          this.newmensaje = '';
+        },
+        (error) => {
+          console.error('Error adding comment:', error);
+        }
+      );
     }
-  }
 
+  }
 }
