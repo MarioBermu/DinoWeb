@@ -6,28 +6,30 @@ import { OnInit } from '@angular/core';
 import { MensajeI } from '../../models/mensaje';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-foro',
-  standalone: true,
+  styleUrls: ['./foro.component.css'],  // Cambiado de styleUrl a styleUrls
+  standalone: true,  // No estoy seguro de para qué se utiliza standalone, pero debería estar bien si lo necesitas.
   imports: [CommonModule, FormsModule],
-  templateUrl: './foro.component.html',
-  styleUrl: './foro.component.css'
+  templateUrl: './foro.component.html'
 })
 export class ForoComponent implements OnInit {
   newmensaje: string='';
   comments$: Observable<any[]> | undefined;
+
   constructor(private foroService: ForoService) { }
+
   ngOnInit() {
     this.cargarMensajes();
   }
+
   cargarMensajes() {
     this.comments$ = this.foroService.getMensajes();
   }
 
-  publicarMensaje() {
-    if (this.newmensaje.trim() !== '') {
-      this.foroService.crearMensaje(this.newmensaje).subscribe(
+  publicarMensaje(newmensaje: string) {
+    if (newmensaje.trim() !== '') {
+      this.foroService.crearMensaje(newmensaje).subscribe(
         () => {
           this.cargarMensajes();
           this.newmensaje = '';
@@ -37,6 +39,5 @@ export class ForoComponent implements OnInit {
         }
       );
     }
-
   }
 }

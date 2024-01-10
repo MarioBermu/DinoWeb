@@ -3,17 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const foroSchema = new Schema({
-  name:{
-    type: String,
-    required: true,
-    trim: true
-  },
+  name: String,
 
-  mensaje:{
-    type: String,
-    required: true,
-    trim: true
-  },
+
+  mensaje:String,
 },
 {timestamps: true}
 );
