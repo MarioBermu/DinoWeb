@@ -162,6 +162,54 @@ const CargarCromos = async() => {
                         images: "https://i.kym-cdn.com/photos/images/original/002/578/390/f22"
                         },
 
+                        {
+                          id: 21,
+                          title: 'Cromo Digimon Jurasico',
+                          price: 100,
+                          description: 'esta extinguido',
+                          images: "https://i.pinimg.com/originals/cd/64/af/cd64af5c2e53f0236504d22a7b77b5bb.jpg"
+                          },
+                          {
+                            id: 22,
+                            title: 'Cromo Dinosauro Napoleon',
+                            price: 100,
+                            description: 'esta extinguido',
+                            images: "https://storage.prompt-hunt.workers.dev/clev8bnqz0001ld08w2ns4tku_1"
+                            },
+
+                            {
+                              id: 23,
+                              title: 'Cromo Dinosauro Desmontable',
+                              price: 100,
+                              description: 'esta extinguido',
+                              images: "https://www.toysrus.es/medias/?context=bWFzdGVyfHByb2R1Y3RfaW1hZ2VzfDI4NTM0fGltYWdlL2pwZWd8YURRNEwyZzRPQzg0T0RFek1EWTJOamd5TXprNHw3Y2Y2ZTI4MTQzOGY0MWViNzlkODdkNWZmZDZlMWZmMmUxYzBlMzg3ZTdmODUwZGVlNTVkODRiZDlhZDEzMzc3"
+                              },
+
+                              {
+                                id: 24,
+                                title: 'Cromo Dinosauro Volador',
+                                price: 100,
+                                description: 'esta extinguido',
+                                images: "https://www.nationalgeographic.com.es/medio/2023/10/17/sinomacrops-bondei-zhao-chuang_bc813109_231017163526_1200x630.jpg"
+                                },
+                                {
+                                  id: 25,
+                                  title: 'Cromo Dinosauro Volador V2',
+                                  price: 100,
+                                  description: 'esta extinguido',
+                                  images: "https://www.sorprendelima.pe/cdn/shop/files/1200_69_1445x.png?v=1684943593"
+                                  },
+                                  {
+                                    id: 26,
+                                    title: 'Cromo Dinosauria Bailarina',
+                                    price: 100,
+                                    description: 'esta extinguido',
+                                    images: "https://www.collector4u.com/wp-content/uploads/2020/12/x_neca30626_g.jpg"
+                                    },
+
+
+
+
 
 
 
