@@ -216,8 +216,8 @@ const CargarCromos = async() => {
                                       },
                                       {
                                         id: 28,
-                                        title: 'Cromo Dino fUMADO',
-                                        price: 90,
+                                        title: 'Cromo Dino fumado',
+                                        price: 100,
                                         description: 'esta extinguido',
                                         images: "https://www.muyinteresante.es/files/article_social_75/uploads/2023/08/31/64f08d1547239.jpeg"
                                         },
