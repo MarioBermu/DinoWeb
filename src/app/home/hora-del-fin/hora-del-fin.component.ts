@@ -33,7 +33,7 @@ startCountdown(): void {
   if (countdownElement) {
     countdownElement.innerHTML = `<h1>${dias}d ${horas}h ${minutos}m ${segundos}s</h1>
     <br>
-    <h1 class='grande'>NO TE OLVIDES DE BOTAR!</h1>`;
+    <h1 class='grande'>TICK TACK!⏳</h1>`;
 
   }
 

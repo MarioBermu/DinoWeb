@@ -1,14 +1,90 @@
+<br>
+<h1>EsATas viendo la paIna principal</h1>
+<div class="container">
 
-<h1>Esatas viendo la paina principal</h1>
-<app-boton-dino-random ngSkipHydration></app-boton-dino-random>
-<h3>Linea temporl a escala de la vida de los dinosaurios en comparacion de los homo sapiens</h3>
-<div class="imagen">
-  <img src="./../../assets/img/pixiltemp.png"  alt="imagen1">
+  <div class="entries">
+    <h1>POSTS</h1>
+    <div class="entry">
+    <h1>el Microraptor</h1>
+    <p>Aunque a menudo se piensa en los dinosaurios como criaturas enormes, algunos de ellos eran bastante pequeños. El dinosaurio más pequeño conocido es el Microraptor, que medía alrededor de 2.5 pies (0.76 metros) de longitud. Tenía plumas y vivió durante el período Cretácico en lo que ahora es China. A pesar de su tamaño diminuto, el Microraptor era un depredador ágil y probablemente capaz de volar o planear. Este ejemplo destaca la diversidad en formas y tamaños que existieron entre los dinosaurios.</p>
+    <div class="imagen">
+      <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/03_lizardmeal_microraptor_illustration_doyle_trankina.jpg?w=1600&h=996"  alt="Microraptor">
+    </div>
+
+  </div>
+  <div class="entry ">
+      <h3>Linea temporl a escala de la vida de los dinosaurios en comparacion de los homo sapiens</h3>
+      <div class="imagen">
+        <img src="./../../assets/img/pixiltemp.png"  alt="imagen escala de tiempo">
+      </div>
+      <br>
+      <p>Lo asombroso es que los dinosaurios existieron durante aproximadamente 165 millones de años, desde hace unos 230 millones de años hasta hace unos 65 millones de años, cuando se cree que ocurrió la extinción masiva que condujo a su desaparición. En comparación, los humanos modernos, Homo sapiens, han estado presentes en la Tierra solo durante unos pocos cientos de miles de años. La longevidad de la era de los dinosaurios destaca la increíble diversidad y adaptabilidad de estos fascinantes reptiles que dominaron el planeta durante un período excepcionalmente extenso.</p>
+  </div>
+  </div>
+
+  <div class="foro">
+    <div *ngIf="authService.isAuthenticated()">
+      <app-foro> </app-foro>
+    </div>
+    <div *ngIf="!authService.isAuthenticated()">
+      <h1>FORO</h1>
+      <h2>Creo que deberias iniciar sesion para verlo 😉</h2>
+    </div>
+  </div>
+
+  <div class="foro">
+    <div *ngIf="authService.isAuthenticated()">
+    <app-welcome></app-welcome>
+  </div>
+  <div *ngIf="!authService.isAuthenticated()">
+    <h1>OPS EL TEST NO CARGA!!</h1>
+    <h2>Registrate a nuestra web por 5$ y podras hacerlo😉</h2>
+  </div>
+
+  </div>
+
+
+    <div class="entries">
+    <div class="entry">
+      <h1>EXTINCION</h1>
+      <h2>Se puede saber el dia que nos extinguiremos? Podemos prepararnos?</h2>
+      <h3>Claroq ue podemos saber el dia, podemos saber hasta la HORA!!! Incluso el minuto EXACTO!!!!</h3>
+      <h2>¿ESTAS PREPARSDO PARA SABERLO?</h2>
+      <app-hora-del-fin></app-hora-del-fin>
+    </div>
+    <div class="entry">
+      <h1>DINOPOLIS 🦕</h1>
+      <p>Dinópolis es un parque temático dedicado a los dinosaurios y la paleontología, ubicado en la ciudad de Teruel, España. Fue inaugurado en 2001 y se ha convertido en uno de los principales atractivos turísticos de la región. El parque tiene como objetivo principal educar y entretener a los visitantes, ofreciendo experiencias relacionadas con el fascinante mundo de los dinosaurios.</p>
+     <img src="https://www.pequevisitas.com/wp-content/uploads/2020/03/dinopolis-logo.png" alt="Dinopolis">
+    </div>
+
 </div>
 
+<div class="entries">
+<div class="entry">
+  <h1>CHISTE</h1>
+  <img src="https://pbs.twimg.com/media/ETzrEsOWkAEzrbl.jpg:large" alt="chiste" >
+</div>
+<div class="entry">
+  <h1>CHISTE</h1>
+  <img src="https://pm1.aminoapps.com/7064/82a500faf6d01a7df194bf8992bf839a650fc6d8r1-540-540v2_uhq.jpg" alt="CHISTE">
+</div>
+</div>
 
-<app-hora-del-fin></app-hora-del-fin>
-<div *ngIf="authService.isAuthenticated()">
-<app-foro> </app-foro>
-<app-welcome></app-welcome>
+<div class="entries">
+  <div class="entry">
+    <h1>T.Rex</h1>
+    <p>Un dato curioso sobre el Tyrannosaurus rex (T. rex) es que, a pesar de su enorme tamaño y apariencia feroz, se cree que este dinosaurio carnívoro pudo haber tenido una visión bastante aguda. Se ha sugerido que el T. rex tenía una visión binocular similar a la de las águilas modernas.
+      Los paleontólogos han examinado la estructura de los ojos fósiles de algunos dinosaurios, incluido el T. rex, y han notado que sus ojos estaban orientados hacia el frente, lo que permitiría una mayor superposición visual entre los campos de visión de ambos ojos. Esta disposición sugiere que el T. rex podía percibir la profundidad y tener una visión tridimensional, lo que sería beneficioso para la caza y la coordinación de movimientos, características útiles para un depredador de su tamaño.
+      Aunque no se conoce con certeza todos los detalles sobre su comportamiento visual, la idea de que el T. rex podría haber tenido una visión aguda agrega un fascinante matiz a nuestra comprensión de la biología de este icónico dinosaurio.</p>
+      <img src="https://valenciaplaza.com/public/Image/2017/7/0bd0cb747ee3984222d778b774e2889e_NoticiaAmpliada.jpg" alt="T.REX">
+    </div>
+
+  <div class="entry">
+    <h1>Plantas del jurásico</h1>
+    <p>Un dato curioso sobre las plantas del Jurásico es que durante este período, las plantas con flores, también conocidas como angiospermas, aún no habían evolucionado completamente. Las plantas dominantes en el Jurásico eran principalmente gimnospermas, que incluían coníferas, cicadas y ginkgos.
+      Las coníferas, como los pinos y abetos modernos, eran comunes y desempeñaban un papel importante en los paisajes jurásicos. Además, las cicadas, que son plantas con flores pero con una estructura de floración diferente de las angiospermas, también eran prominentes. Ginkgos, como el Ginkgo biloba que aún existe hoy en día, también se encontraban entre las especies presentes.
+      Lo curioso es que las angiospermas, a pesar de ser ahora las plantas con flores más dominantes en la Tierra, solo comenzaron a diversificarse y a volverse más comunes hacia el final del Jurásico y durante el Cretácico. Esto significa que las plantas con flores que vemos hoy en día evolucionaron más tarde en la historia de la Tierra, en comparación con las gimnospermas que eran predominantes en el Jurásico.</p>
+  <img src="https://elnougarden.com/cdn/shop/products/4c58300a508b09e3ae87ebd11f715785.jpg?v=1673617638" alt="Ginkgo biloba">
+    </div>
 </div>
