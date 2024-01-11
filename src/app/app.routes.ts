@@ -10,6 +10,11 @@ import { PagejuegoComponent } from './pagejuego/pagejuego.component';
 import { PageNosotrosComponent } from './page-nosotros/page-nosotros.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PreguntaComponent } from './home/test/pregunta/pregunta.component';
+import { WelcomeComponent } from './home/test/welcome/welcome.component';
+import { ForoComponent } from './home/foro/foro.component';
+import { HoraDelFinComponent } from './home/hora-del-fin/hora-del-fin.component';
+import { BarraDeNavegacionComponent } from './barra-de-navegacion/barra-de-navegacion.component';
 
 
 export const routes: Routes = [
@@ -22,6 +27,8 @@ export const routes: Routes = [
   { path: 'pageNosotros', component: PageNosotrosComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
+  { path: 'pregunta', component: PreguntaComponent},
+  { path: 'welcome', component: WelcomeComponent},
 ];
 
 @NgModule({

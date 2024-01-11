@@ -1,0 +1,44 @@
+{
+  "questions": [
+  {
+    "questionText": "¿Cómo te describirías en términos de personalidad?",
+    "options": [
+      {"text": "Serio y enérgico", "dinosaurio": "Tiranosaurio Rex"},
+      {"text": "Tranquilo y relajado", "dinosaurio": "Triceratops"},
+      {"text": "Curioso y juguetón", "dinosaurio": "Velociraptor"}
+    ]
+  },
+  {
+    "questionText": "¿Cuál es tu entorno favorito?",
+    "options": [
+      {"text": "Bosques densos", "dinosaurio": "Tiranosaurio Rex"},
+      {"text": "Playas y costas", "dinosaurio": "Triceratops"},
+      {"text": "Zonas con mucha vegetación", "dinosaurio": "Velociraptor"}
+    ]
+  },
+  {
+    "questionText": "En una situación de conflicto, ¿cuál es tu enfoque?",
+    "options": [
+      {"text": "Luchar con valentía", "dinosaurio": "Tiranosaurio Rex"},
+      {"text": "Tratar de evitar el conflicto", "dinosaurio": "Triceratops"},
+      {"text": "Intentar resolver las cosas de manera diplomática", "dinosaurio": "Velociraptor"}
+    ]
+  },
+  {
+    "questionText": "¿Cuál es tu comida favorita?",
+    "options": [
+      {"text": "Carnes frescas", "dinosaurio": "Tiranosaurio Rex"},
+      {"text": "Peces y mariscos", "dinosaurio": "Triceratops"},
+      {"text": "Vegetales y frutas", "dinosaurio": "Velociraptor"}
+    ]
+  },
+  {
+    "questionText": "¿Cómo pasas tu tiempo libre idealmente?",
+    "options": [
+      {"text": "Participando en actividades físicas", "dinosaurio": "Tiranosaurio Rex"},
+      {"text": "Descansando y disfrutando del paisaje", "dinosaurio": "Triceratops"},
+      {"text": "Aprendiendo nuevas cosas y explorando", "dinosaurio": "Velociraptor"}
+    ]
+  }
+  ]
+}

@@ -12,3 +12,14 @@ button{
   align-items: center;
   width: 80%; /* Establece el ancho del botón */
 }
+
+h1{
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+ .fondo {
+  background-color: #6e6e6e;
+}

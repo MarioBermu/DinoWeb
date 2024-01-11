@@ -9,6 +9,9 @@ import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { ForoComponent } from './foro/foro.component';
+import { PreguntaComponent } from './test/pregunta/pregunta.component';
+import { WelcomeComponent } from './test/welcome/welcome.component';
+
 
 
 
@@ -17,7 +20,7 @@ import { ForoComponent } from './foro/foro.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, BarraDeNavegacionComponent,BotonDinoRandomComponent, JuegodinoComponent, HoraDelFinComponent, ForoComponent],
+  imports: [CommonModule, RouterModule, BarraDeNavegacionComponent,BotonDinoRandomComponent, JuegodinoComponent, HoraDelFinComponent, ForoComponent, PreguntaComponent, WelcomeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
