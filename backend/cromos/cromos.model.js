@@ -207,7 +207,13 @@ const CargarCromos = async() => {
                                     description: 'esta extinguido',
                                     images: "https://www.collector4u.com/wp-content/uploads/2020/12/x_neca30626_g.jpg"
                                     },
-
+                                    {
+                                      id: 27,
+                                      title: 'Cromo Dino pato',
+                                      price: 90,
+                                      description: 'este se puede comprar de verdad',
+                                      images: "https://www.duckshop.de/media/image/dc/ef/f1/Jurassic_Park_-_Velociraptor_103535717.jpg"
+                                      },
 
 
 
