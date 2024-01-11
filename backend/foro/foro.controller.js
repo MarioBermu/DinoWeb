@@ -1,9 +1,10 @@
 const Mensaje = require('./foro.dao');
 
 exports.createMensaje = (req, res) => {
+  console.log('Cuerpo de la solicitud:', req.body);
   const newMensaje = {
     name: req.body.name,
-    mensaje: req.body.mensaje,
+    message: req.body.message,
   }
 
   Mensaje.create(newMensaje, (err, mensaje) => {
@@ -19,8 +20,8 @@ exports.createMensaje = (req, res) => {
 
 exports.getMensajes = async (req, res) => {
   try {
-    const mensaje = await Mensaje.find();
-    res.json(mensaje);
+    const mensajes = await Mensaje.find();
+    res.json(mensajes);
   } catch (err) {
     res.json({ message: 'estoy triste' });
   }

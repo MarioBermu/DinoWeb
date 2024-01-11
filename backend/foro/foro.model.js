@@ -4,9 +4,7 @@ const Schema = mongoose.Schema;
 
 const foroSchema = new Schema({
   name: String,
-
-
-  mensaje:String,
+  message:String,
 },
 {timestamps: true}
 );

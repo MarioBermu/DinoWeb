@@ -19,9 +19,9 @@ export class ForoService {
   constructor(private httpClient: HttpClient) {
 
   }
-crearMensaje(mensaje: string): Observable<any> {
+crearMensaje(mensaje:{name: string, message: string}): Observable<any> {
 
-  return this.httpClient.post<any>(`${this.AUTH_SERVER}`,{message:mensaje} );
+  return this.httpClient.post<any>(`${this.AUTH_SERVER}`,mensaje );
 
     }
 

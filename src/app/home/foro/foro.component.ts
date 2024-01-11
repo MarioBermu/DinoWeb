@@ -5,6 +5,7 @@ import { ForoService } from '../../service/foro.service';
 import { OnInit } from '@angular/core';
 import { MensajeI } from '../../models/mensaje';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-foro',
@@ -15,9 +16,11 @@ import { Observable } from 'rxjs';
 })
 export class ForoComponent implements OnInit {
   newmensaje: string='';
+  name: string='';
   comments$: Observable<any[]> | undefined;
 
-  constructor(private foroService: ForoService) { }
+
+  constructor(private foroService: ForoService, private router: Router) { }
 
   ngOnInit() {
     this.cargarMensajes();
@@ -27,17 +30,22 @@ export class ForoComponent implements OnInit {
     this.comments$ = this.foroService.getMensajes();
   }
 
-  publicarMensaje(newmensaje: string) {
+  publicarMensaje(nombre :string ,newmensaje: string) {
     if (newmensaje.trim() !== '') {
-      this.foroService.crearMensaje(newmensaje).subscribe(
+
+      console.log('Publicando mensaje...');
+      window.location.href = 'http://localhost:4200/home';
+      this.foroService.crearMensaje({ name: nombre, message: newmensaje }).subscribe(
         () => {
-          this.cargarMensajes();
-          this.newmensaje = '';
+
+
+
         },
         (error) => {
           console.error('Error adding comment:', error);
         }
       );
     }
+
   }
 }
