@@ -8,5 +8,7 @@
 
 
 <app-hora-del-fin></app-hora-del-fin>
+<div *ngIf="authService.isAuthenticated()">
 <app-foro> </app-foro>
 <app-welcome></app-welcome>
+</div>

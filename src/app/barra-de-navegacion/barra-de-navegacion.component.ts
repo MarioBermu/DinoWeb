@@ -26,7 +26,7 @@ import { UserI } from '../models/user';
 export class BarraDeNavegacionComponent implements OnInit {
   loggedInUsers: string = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.authService.loggedInUsers.subscribe(name => {
@@ -38,6 +38,14 @@ export class BarraDeNavegacionComponent implements OnInit {
     this.authService.logout();
     this.router.navigateByUrl('/home');
     //this.router.navigateByUrl('/admin');
+  }
+
+  get userName(): string | null {
+    return this.authService.getUserName();
+  }
+
+  get userEmail(): string | null {
+    return this.authService.getUserEmail();
   }
 }
 

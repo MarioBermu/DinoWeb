@@ -13,10 +13,6 @@ import { PreguntaComponent } from './test/pregunta/pregunta.component';
 import { WelcomeComponent } from './test/welcome/welcome.component';
 
 
-
-
-
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -27,7 +23,9 @@ import { WelcomeComponent } from './test/welcome/welcome.component';
 export class HomeComponent implements OnInit {
   loggedInUsers: string = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) {
+
+  }
 
   ngOnInit() {
     this.authService.loggedInUsers.subscribe(name => {
@@ -39,5 +37,12 @@ export class HomeComponent implements OnInit {
     this.authService.logout();
     // this.router.navigateByUrl('/home');
     this.router.navigateByUrl('/admin');
+  }
+  get userName(): string | null {
+    return this.authService.getUserName();
+  }
+
+  get userEmail(): string | null {
+    return this.authService.getUserEmail();
   }
 }

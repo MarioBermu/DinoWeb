@@ -6,6 +6,7 @@ import { OnInit } from '@angular/core';
 import { MensajeI } from '../../models/mensaje';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-foro',
@@ -20,7 +21,7 @@ export class ForoComponent implements OnInit {
   comments$: Observable<any[]> | undefined;
 
 
-  constructor(private foroService: ForoService, private router: Router) { }
+  constructor(public authService: AuthService, private foroService: ForoService, private router: Router) { }
 
   ngOnInit() {
     this.cargarMensajes();
@@ -29,6 +30,8 @@ export class ForoComponent implements OnInit {
   cargarMensajes() {
     this.comments$ = this.foroService.getMensajes();
   }
+
+
 
   publicarMensaje(nombre :string ,newmensaje: string) {
     if (newmensaje.trim() !== '') {
@@ -47,5 +50,12 @@ export class ForoComponent implements OnInit {
       );
     }
 
+  }
+  get userName(): string | null {
+    return this.authService.getUserName();
+  }
+
+  get userEmail(): string | null {
+    return this.authService.getUserEmail();
   }
 }

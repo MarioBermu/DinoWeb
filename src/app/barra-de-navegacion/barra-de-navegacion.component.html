@@ -26,7 +26,7 @@
           <a href="/dinocromos" routerLinkActive="active-link" class="nav-link">Dinocromos</a>
         </li>
 
-          <div *ngIf="!loggedInUsers" >
+        <div *ngIf="!authService.isAuthenticated()">
             <li class="nav-item derecha1">
               <a href="/login" routerLinkActive="active-link" class="nav-link">Iniciar Sesión</a>
             </li>
@@ -34,8 +34,8 @@
                 <a href="/register" routerLinkActive="active-link" class="nav-link">Registro</a>
             </li>
             </div>
-          <div *ngIf="loggedInUsers" class="greeting derecha1">Hola, {{ loggedInUsers }}!
-            <button *ngIf="loggedInUsers" (click) ="onLogout()">Logout</button>
+            <div *ngIf="authService.isAuthenticated()" class="greeting derecha2">Hola,  {{userName}} !
+            <button (click) ="onLogout()">Logout</button>
           </div>
 
 

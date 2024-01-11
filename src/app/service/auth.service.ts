@@ -64,12 +64,42 @@ export class AuthService {
     this.token = token;
   }
 
-  private getToken(): string {
-    if (!this.token) {
-      this.token = localStorage.getItem("ACCESS_TOKEN") || '';
-    }
-    return this.token;
+
+  private tokenKey = 'ACCESS_TOKEN';
+  private nameKey = 'NAME';
+  private emailKey = 'EMAIL';
+
+  getToken(): string {
+    return localStorage.getItem(this.tokenKey) || '';
   }
+
+  setToken(token: string): void {
+    localStorage.setItem(this.tokenKey, token);
+  }
+
+  removeToken(): void {
+    localStorage.removeItem(this.tokenKey);
+  }
+
+  isAuthenticated(): boolean {
+    // Implementa la lógica para verificar si el usuario está autenticado
+    const token = this.getToken();
+    return !!token;
+  }
+
+  getUserName(): string | null {
+    return localStorage.getItem(this.nameKey);
+  }
+
+  getUserEmail(): string | null {
+    return localStorage.getItem(this.emailKey);
+  }
+
+  saveUserInfo(name: string, email: string): void {
+    localStorage.setItem(this.nameKey, name);
+    localStorage.setItem(this.emailKey, email);
+  }
+
 
   //guardamos el nombre del usuario logueado
   private nombre = new BehaviorSubject<string>('');
