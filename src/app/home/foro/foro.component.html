@@ -17,16 +17,7 @@
     ></textarea>
   </div>
 
-  <div class="form-group mt-3">
-    <label for="nameTextarea">Nombre:</label>
-    <textarea
-      id="nameTextarea"
-      class="form-control"
-      [(ngModel)]="name"
-      placeholder="Añadir nombre"
-      rows="1"
-    ></textarea>
-  </div>
 
-  <button class="btn btn-primary" (click)="publicarMensaje(name, newmensaje)">Enviar Comentario</button>
+
+  <button class="btn btn-primary" (click)="publicarMensaje(newmensaje)">Enviar Comentario</button>
 </div>
