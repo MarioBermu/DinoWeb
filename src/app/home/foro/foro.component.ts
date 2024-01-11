@@ -33,14 +33,12 @@ export class ForoComponent implements OnInit {
 
 
 
-  publicarMensaje( newmensaje: string) {
-
-    const nombre = this.userName || 'Anónimo'
+  publicarMensaje(newmensaje: string) {
+    const nombre = this.userName || 'Anónimo';
     if (newmensaje.trim() !== '') {
 
       console.log('Publicando mensaje...');
       window.location.href = 'http://localhost:4200/home';
-
       this.foroService.crearMensaje({ name: nombre, message: newmensaje }).subscribe(
         () => {
 
@@ -51,8 +49,9 @@ export class ForoComponent implements OnInit {
           console.error('Error adding comment:', error);
         }
       );
+    }
 
-    }}
+  }
   get userName(): string | null {
     return this.authService.getUserName();
   }
