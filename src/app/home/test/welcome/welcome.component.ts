@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../service/auth.service';
 
 @Component({
   selector: 'app-welcome',
@@ -11,12 +12,13 @@ import { Router } from '@angular/router';
 export class WelcomeComponent implements OnInit {
 
   @ViewChild('name') nameKey!: ElementRef;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
   startQuiz(){
-    localStorage.setItem("name",this.nameKey.nativeElement.value);
+    const name = this.authService.getUserName() || "Anonimo";
+    localStorage.setItem("name",name);
     this.router.navigateByUrl('/pregunta');
   }
 

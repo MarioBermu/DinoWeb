@@ -70,16 +70,16 @@ export class PreguntaComponent implements OnInit {
   getWinner() {
     if (this.pointsA > this.pointsB && this.pointsA > this.pointsC) {
       this.winner = "Tiranosaurio Rex";
-      this.URL = "https://static.wikia.nocookie.net/jurassicpark/images/8/88/FY3vrZzXwAAfklv-T.png/revision/latest/scale-to-width-down/1200?cb=20220804160841&path-prefix=es"
+      this.URL = "https://i.ytimg.com/vi/bB1uHBEKNN0/hqdefault.jpg";
     } else if (this.pointsB > this.pointsA && this.pointsB > this.pointsC) {
       this.winner = "Velociraptor";
-      this.URL = "https://www.duckshop.de/media/image/dc/ef/f1/Jurassic_Park_-_Velociraptor_103535717.jpg"
+      this.URL = "https://i.pinimg.com/originals/22/d3/dd/22d3dd26a0b90f78c949b1854b448b5e.jpg";
     } else if (this.pointsC > this.pointsA && this.pointsC > this.pointsB) {
       this.winner = "Triceratops";
-      this.URL ="https://imagenes.muyinteresante.es/files/composte_image/uploads/2023/01/22/63cd065d4490e.jpeg"
+      this.URL ="https://i.ytimg.com/vi/tYm7xeg27Rw/maxresdefault.jpg";
     } else {
       this.winner = "Oviraptor";
-      this.URL ="https://www.sopadesapo.com//imagenes_grandes/9788469/978846966325.JPG"
+      this.URL ="https://cdnb.artstation.com/p/assets/images/images/065/510/073/large/joel-codina-frame1078-overpaint-v002.jpg?1690537650";
     }
 
   }

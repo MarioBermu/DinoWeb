@@ -15,6 +15,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const cromosRoutes = require('./cromos/cromos.routes');
 const foroRoutes = require('./foro/foro.routes');
+const preguntasRoutes = require('./preguntas/preguntas.routes');
 const bodyParserJSON = bodyParser.json();
 const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 
@@ -36,6 +37,7 @@ cromosRoutes(router);
 
 foroRoutes(router);
 
+preguntasRoutes(router);
 
 app.use(router);
 app.listen(propierties.PORT, () => console.log(`Server runing on port ${propierties.PORT}`));

@@ -15,6 +15,7 @@ import { WelcomeComponent } from './home/test/welcome/welcome.component';
 import { ForoComponent } from './home/foro/foro.component';
 import { HoraDelFinComponent } from './home/hora-del-fin/hora-del-fin.component';
 import { BarraDeNavegacionComponent } from './barra-de-navegacion/barra-de-navegacion.component';
+import { PreguntasComponent } from './preguntas/preguntas.component'
 
 
 export const routes: Routes = [
@@ -29,6 +30,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'pregunta', component: PreguntaComponent},
   { path: 'welcome', component: WelcomeComponent},
+  { path: 'preguntas', component: PreguntasComponent}
 ];
 
 @NgModule({
