@@ -214,6 +214,14 @@ const CargarCromos = async() => {
                                       description: 'este se puede comprar de verdad',
                                       images: "https://www.duckshop.de/media/image/dc/ef/f1/Jurassic_Park_-_Velociraptor_103535717.jpg"
                                       },
+                                      {
+                                        id: 28,
+                                        title: 'Cromo Dino fumado',
+                                        price: 100,
+                                        description: 'esta extinguido',
+                                        images: "https://www.muyinteresante.es/files/article_social_75/uploads/2023/08/31/64f08d1547239.jpeg"
+                                        },
+
 
 
 
